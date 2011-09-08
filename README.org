@@ -1,0 +1,6 @@
+#+Title:      Emacs Reboot
+#+AUTHOR:       Avdi Grimm
+#+EMAIL:        avdi@avdi.org
+
+* What's all this?
+  This is my start-from-scratch Emacs 24 configuration.
