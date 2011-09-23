@@ -1,0 +1,3 @@
+[submodule "elisp/external/gist.el"]
+	path = elisp/external/gist.el
+	url = https://github.com/mhayashi1120/gist.el.git

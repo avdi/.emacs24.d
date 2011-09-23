@@ -1,2 +1,4 @@
 backup
 /url/cookies
+/secrets.el
+/session.*
