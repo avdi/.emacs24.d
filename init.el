@@ -11,6 +11,8 @@
 (when (file-exists-p abg-secrets-file)
   (load abg-secrets-file))
 
+(add-to-list 'load-path abg-elisp-dir)
+
 ; Add external projects to load path
 (dolist (project (directory-files abg-elisp-external-dir t "\\w+"))
   (when (file-directory-p project)
@@ -21,13 +23,32 @@
 (setq backup-directory-alist
       (list (cons "." (expand-file-name "backup" user-emacs-directory))))
 
+
 (require 'eieio)			; needed for gh.el
 (require 'gist)
 (setq gist-authenticate-function 'gist-basic-authentication)
 
+(package-initialize)
+
+(require 'netrc)
+(require 'org2blog)
+(setq abg-netrc-vc (netrc-machine (netrc-parse "~/.netrc") "virtuouscode" t))
+(setq org2blog/wp-blog-alist
+      '(("virtuouscode"
+	 :url "http://avdi.org/devblog/xmlrpc.php"
+	 :username (netrc-get abg-netrc-vc "login")
+	 :password (netrc-get abg-netrc-vc "password")
+	 :tags-as-categories nil)))
+
+; Autoloads
+(autoload 'Lorem-ipsum-insert-paragraphs "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-sentences "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-list "lorem-ipsum" "" t)
+
 ; Keyboard Bindings
 (global-set-key (kbd "<f8>") 'gist-region-or-buffer)
-
+(global-set-key (kbd "<f9>") 'org2blog/wp-new-entry)
+(global-set-key (kbd "S-<f9>") 'org2blog/wp-post-buffer)
 
 ;; Set up 'custom' system
 (setq custom-file (expand-file-name "emacs-customizations.el" abg-emacs-config-dir))
