@@ -28,7 +28,17 @@
 (require 'gist)
 (setq gist-authenticate-function 'gist-basic-authentication)
 
+(setq package-archives 
+      '(("gnu" . "http://elpa.gnu.org/packages/") 
+	("marmalade" . "http://marmalade-repo.org/packages/") 
+	("Tromey" . "http://tromey.com/elpa/")))
 (package-initialize)
+(setq abg-required-packages 
+      (list 'xml-rpc 'magit 'gh))
+(dolist (package abg-required-packages)
+  (when (not (package-installed-p package))
+    (package-refresh-contents)
+    (package-install package)))
 
 (require 'netrc)
 (require 'org2blog)

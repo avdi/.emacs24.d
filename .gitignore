@@ -3,3 +3,4 @@ backup
 /secrets.el
 /session.*
 /tramp
+/elpa
