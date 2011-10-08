@@ -1,5 +1,5 @@
 (setq abg-required-packages 
-      (list 'xml-rpc 'magit 'gh))
+      (list 'xml-rpc 'magit 'gh 'inf-ruby))
 
 (require 'eieio)
 (setq package-archives 
