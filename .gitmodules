@@ -4,3 +4,6 @@
 [submodule "elisp/external/org2blog"]
 	path = elisp/external/org2blog
 	url = https://github.com/punchagan/org2blog.git
+[submodule "elisp/external/rvm.el"]
+	path = elisp/external/rvm.el
+	url = https://github.com/senny/rvm.el.git
