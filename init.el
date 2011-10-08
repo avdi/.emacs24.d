@@ -50,6 +50,12 @@
 	 :password (netrc-get abg-netrc-vc "password")
 	 :tags-as-categories nil)))
 
+;; Line numbers
+(add-hook 'abg-code-modes-hook
+	  (lambda () (linum-mode 1)))
+(add-hook 'ruby-mode-hook
+	  (lambda () (run-hooks 'abg-code-modes-hook)))
+
 ; Autoloads
 (autoload 'Lorem-ipsum-insert-paragraphs "lorem-ipsum" "" t)
 (autoload 'Lorem-ipsum-insert-sentences "lorem-ipsum" "" t)
