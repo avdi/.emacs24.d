@@ -4,4 +4,4 @@ backup
 /session.*
 /tramp
 /elpa
-/elisp/external
+
