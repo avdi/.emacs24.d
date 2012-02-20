@@ -7,3 +7,9 @@
 [submodule "elisp/external/rvm.el"]
 	path = elisp/external/rvm.el
 	url = https://github.com/senny/rvm.el.git
+[submodule "elisp/external/hideshow-org.git"]
+	path = elisp/external/hideshow-org.git
+	url = https://github.com/secelis/hideshow-org.git
+[submodule "elisp/external/rhtml"]
+	path = elisp/external/rhtml
+	url = https://github.com/eschulte/rhtml.git
