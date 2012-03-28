@@ -8,17 +8,18 @@
 * Install Instructions
   Make sure to back up any .emacs.d/ directory with a simple 
 #+BEGIN_SRC bash
-mv .emacs.d/ .old-emacs.d/
+mv ~/.emacs.d/ ~/.old-emacs.d/
 #+END_SRC
 
   Simply Git clone this url using ``
 #+BEGIN_SRC bash
-git clone https://github.com/avdi/.emacs24.d.git .emacs.d/ 
+git clone https://github.com/avdi/.emacs24.d.git ~/.emacs.d/ 
 #+END_SRC
 
   Using git submodules in the directories, you will need to run
 #+BEGIN_SRC bash
-git submodules init && git submodules update
+cd ~/.emacs.d/
+git submodule init && git submodule update
 #+END_SRC
 
   Finally open emacs 24 for the first time and it will install everything. Make sure you have an internet connection.
