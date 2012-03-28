@@ -6,7 +6,19 @@
   This is my start-from-scratch Emacs 24 configuration. 
   
 * Install Instructions
-  Make sure to back up any .emacs.d/ directory with a simple `mv .emacs.d/ .old-emacs.d/ `
-  Simply Git clone this url using `git clone git@github.com:pjammer/.emacs24.d.git .emacs.d/ `
-  Using git submodules, we need to run `git submodules init` and then `git submodules update` 
+  Make sure to back up any .emacs.d/ directory with a simple 
+#+BEGIN_SRC bash
+mv .emacs.d/ .old-emacs.d/
+#+END_SRC
+
+  Simply Git clone this url using ``
+#+BEGIN_SRC bash
+git clone git@github.com:pjammer/.emacs24.d.git .emacs.d/ 
+#+END_SRC
+
+  Using git submodules in the directories, you will need to run
+#+BEGIN_SRC bash
+git submodules init && git submodules update
+#+END_SRC
+
   Finally open emacs 24 for the first time and it will install everything. Make sure you have an internet connection.
