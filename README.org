@@ -13,7 +13,7 @@ mv .emacs.d/ .old-emacs.d/
 
   Simply Git clone this url using ``
 #+BEGIN_SRC bash
-git clone git@github.com:pjammer/.emacs24.d.git .emacs.d/ 
+git clone https://github.com/avdi/.emacs24.d.git .emacs.d/ 
 #+END_SRC
 
   Using git submodules in the directories, you will need to run
