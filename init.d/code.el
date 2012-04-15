@@ -1,3 +1,7 @@
+(autoload 'fci-mode "fill-column-indicator"
+  "Toggle fill column indicator"
+  t)
+
 ;; Line numbers
 (add-hook 'abg-code-modes-hook
 	  (lambda () (linum-mode 1)))
@@ -14,3 +18,7 @@
 (add-hook 'abg-code-modes-hook
           (lambda ()
             (add-hook 'before-save-hook 'whitespace-cleanup nil t)))
+
+;; Show an indicator of the fill column
+(add-hook 'abg-code-modes-hook
+          (lambda () (fci-mode 1)))            
