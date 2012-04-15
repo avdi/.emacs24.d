@@ -25,6 +25,7 @@
  '(org-emphasis-alist (quote (("*" bold "<strong>" "</strong>") ("/" italic "<em>" "</em>") ("_" underline "<span style=\"text-decoration:underline;\">" "</span>") ("=" org-code "<code>" "</code>" verbatim) ("~" org-verbatim "<code>" "</code>" verbatim) ("+" (:strike-through t) "<del>" "</del>"))))
  '(org-export-htmlize-output-type (quote css))
  '(org-export-htmlized-org-css-url nil)
+ '(org-replace-disputed-keys t)
  '(org2blog/wp-default-categories (quote ("Uncategorized")))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("Tromey" . "http://tromey.com/elpa/"))))
  '(ruby-deep-arglist nil)
