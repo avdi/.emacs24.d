@@ -4,7 +4,7 @@
 (setq abg-netrc-cb (netrc-machine (netrc-parse "~/.netrc") "codebenders" t))
 (setq org2blog/wp-blog-alist
       '(("virtuouscode"
-	 :url "http://avdi.org/devblog/xmlrpc.php"
+	 :url "http://devblog.avdi.org/xmlrpc.php"
 	 :username (netrc-get abg-netrc-vc "login")
 	 :password (netrc-get abg-netrc-vc "password")
 	 :tags-as-categories nil)
