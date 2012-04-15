@@ -17,4 +17,7 @@
 (global-set-key (kbd "<f9>") 'org2blog/wp-new-entry)
 (global-set-key (kbd "S-<f9>") 'org2blog/wp-post-buffer)
 
+(global-set-key (kbd "C-<prior>") 'multi-term-prev)
+(global-set-key (kbd "C-<next>") 'multi-term-next)
+
 
