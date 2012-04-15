@@ -13,3 +13,9 @@
 [submodule "elisp/external/rhtml"]
 	path = elisp/external/rhtml
 	url = https://github.com/eschulte/rhtml.git
+[submodule "elisp/external/org-mode"]
+	path = elisp/external/org-mode
+	url = git://orgmode.org/org-mode.git
+[submodule "elisp/external/capfire-el"]
+	path = elisp/external/capfire-el
+	url = https://github.com/mig/campfire-el.git
