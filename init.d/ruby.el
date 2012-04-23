@@ -6,12 +6,15 @@
 ;; Load rcodetools
 (rvm-use-default)
 
-(defun abg-rcodetools-path ()
-  (let ((gem-output (shell-command-to-string "gem list -l rcodetools"))
-	(version-pattern (rx ?( (group (* anything)) ?))))
-    (string-match version-pattern gem-output)
-    (let ((version (match-string-no-properties 1 gem-output)))
-      (concat (rvm--emacs-gemhome) "/gems/rcodetools-" version "/rcodetools.el"))))
+;; Finding rcodetools the hard way:
+;;
+;; (defun abg-rcodetools-path ()
+;;   (let ((gem-output (shell-command-to-string "gem list -l rcodetools"))
+;; 	(version-pattern (rx ?( (group (* anything)) ?))))
+;;     (string-match version-pattern gem-output)
+;;     (let ((version (match-string-no-properties 1 gem-output)))
+;;       (concat (rvm--emacs-gemhome) "/gems/rcodetools-" version "/rcodetools.el"))))
 
-(load (abg-rcodetools-path))
+;; (load (abg-rcodetools-path))
 
+(require 'rcodetools)
