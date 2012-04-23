@@ -5,3 +5,6 @@ backup
 /tramp
 /elpa
 
+.#*
+*~
+/el-get/el-get/
