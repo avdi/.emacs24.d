@@ -1,6 +1,6 @@
 #!/bin/sh
 
-client=/usr/bin/emacsclient.emacs-snapshot
+client=/usr/bin/emacsclient
 
 case `basename $0` in 
     # Edit no-wait

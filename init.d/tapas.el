@@ -1,7 +1,7 @@
-(require 'color-theme)
-(require 'color-theme-molokai)
-
 (defun make-rubytapas-frame ()
+  (require 'color-theme)
+  (require 'color-theme-molokai)
+
   (interactive)
 
   (let ((color-theme-is-global nil)
