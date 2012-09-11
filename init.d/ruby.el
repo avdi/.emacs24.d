@@ -18,3 +18,5 @@
 ;; (load (abg-rcodetools-path))
 
 (require 'rcodetools)
+(define-key ruby-mode-map (kbd "C-c C-c") 'xmp)
+

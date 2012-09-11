@@ -54,7 +54,6 @@
 	magithub
 	minimap
 	multi-term
-	rinari
 	scss-mode))
 
 ;; Annoying packages that explode during install if their deps are not

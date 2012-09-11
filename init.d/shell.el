@@ -3,10 +3,10 @@
 
 ;; Copy the (possibly themed) ansi-color-names-vector to the
 ;; (annoyingly separate) ansi-term-color-vector
-(add-hook 'term-mode-hook
-          (lambda ()
-            (set-variable 'ansi-term-color-vector ansi-color-names-vector)
-            (local-set-key (kbd "<f2>") 'rename-buffer)))
+;; (add-hook 'term-mode-hook
+;;           (lambda ()
+;;             (set-variable 'ansi-term-color-vector ansi-color-names-vector)
+;;             (local-set-key (kbd "<f2>") 'rename-buffer)))
 
 
 

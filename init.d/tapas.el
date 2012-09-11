@@ -1,0 +1,20 @@
+(require 'color-theme)
+(require 'color-theme-molokai)
+
+(defun make-rubytapas-frame ()
+  (interactive)
+
+  (let ((color-theme-is-global nil)
+        (frame-alist '((width . 80)
+                       (height . 30)
+                       (menu-bar-lines . 0)
+                       (name . "RubyTapas"))))
+    (select-frame (make-frame frame-alist))
+    (color-theme-molokai)
+    (set-frame-font "Inconsolata:pixelsize=24:foundry=unknown:weight=normal:slant=normal:width=normal:spacing=100:scalable=true" nil)
+    (switch-to-buffer "RubyTapas")
+    (ruby-mode)
+    (whitespace-mode -1)
+    (set (make-local-variable 'xmpfilter-command-name)
+         "ruby -S xmpfilter --no-warnings --dev --fork --detect-rbtest")))
+
