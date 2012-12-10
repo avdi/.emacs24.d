@@ -21,4 +21,7 @@
 (global-set-key (kbd "C-<prior>") 'multi-term-prev)
 (global-set-key (kbd "C-<next>") 'multi-term-next)
 
+;; Expansion
+(global-set-key (kbd "M-/") 'hippie-expand)
+
 

@@ -1,6 +1,21 @@
 (require 'color-theme)
 (require 'color-theme-molokai)
 
+(defun abg-slow-playback () "Kill region and then play it back slowly" (interactive)
+  (save-excursion
+    (when (> (point) (mark)) (exchange-point-and-mark))
+    (deactivate-mark)
+    (kill-region (point) (mark t))      
+    (let ((wait 0.1)(text (current-kill 0)))
+      (dotimes (i (length text))
+	; (sit-for 0.2)	
+	(insert (aref text i))
+	(when (read-char (number-to-string (- (length text) i)) nil wait)
+	  (if wait
+	      (set 'wait nil)
+	    (set 'wait 0.1)))))))
+
+
 (defun make-rubytapas-frame ()
   (interactive)
 
@@ -10,11 +25,19 @@
                        (menu-bar-lines . 0)
                        (name . "RubyTapas"))))
     (select-frame (make-frame frame-alist))
-    (color-theme-molokai)
+    (color-theme-rubytapas)
     (set-frame-font "Inconsolata:pixelsize=24:foundry=unknown:weight=normal:slant=normal:width=normal:spacing=100:scalable=true" nil)
     (switch-to-buffer "RubyTapas")
     (ruby-mode)
     (whitespace-mode -1)
+    (menu-bar-mode -1)
     (set (make-local-variable 'xmpfilter-command-name)
-         "ruby -S xmpfilter --no-warnings --dev --fork --detect-rbtest")))
+         "ruby -S xmpfilter --no-warnings --dev --fork --detect-rbtest")
+    (fci-mode -1)
+    (set (make-local-variable 'fill-column) 80)
+    (rainbow-delimiters-mode 1)
+    (hl-line-mode 1)
+    (require 'centered-cursor-mode)
+    (centered-cursor-mode 1)
+    (local-set-key (kbd "<f8>") 'abg-slow-playback)))
 

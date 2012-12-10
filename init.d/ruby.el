@@ -1,5 +1,3 @@
-(add-hook 'ruby-mode-hook
-	  (lambda () (run-hooks 'abg-code-modes-hook)))
 ;(add-hook 'ruby-mode-hook
 ;	  (lambda () (rvm-activate-corresponding-ruby)))
 
@@ -18,5 +16,16 @@
 ;; (load (abg-rcodetools-path))
 
 (require 'rcodetools)
-(define-key ruby-mode-map (kbd "C-c C-c") 'xmp)
 
+(defun abg-xmp (&optional prefix)
+  (interactive "P")
+  (let* ((warnings-flag (if prefix "--warnings" "--no-warnings"))
+         (xmpfilter-command-name 
+          (format "ruby -S xmpfilter %s --dev --fork --detect-rbtest"
+                  warnings-flag)))
+    (xmp)))
+
+(define-key ruby-mode-map (kbd "C-c C-c") 'abg-xmp)
+
+(add-hook 'ruby-mode-hook
+	  (lambda () (run-hooks 'abg-code-modes-hook)))
