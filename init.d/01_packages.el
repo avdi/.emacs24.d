@@ -33,7 +33,7 @@
         (:name hexrgb :type emacswiki)
         (:name inflections :type elpa)
         (:name jump :type elpa)
-        (:name magit-gh-pulls :type elpa)        
+        ;; (:name magit-gh-pulls :type elpa) 
 	(:name eieio :type elpa)
 	(:name gist :type elpa)))
 
@@ -58,7 +58,7 @@
 	inf-ruby
 	jump
 	magit
-	magit-gh-pulls
+	;; magit-gh-pulls
 	magithub
 	minimap
 	multi-term
