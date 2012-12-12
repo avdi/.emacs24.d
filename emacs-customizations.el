@@ -35,10 +35,12 @@
  '(org2blog/wp-default-categories (quote ("Uncategorized")))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("Tromey" . "http://tromey.com/elpa/"))))
  '(ruby-deep-arglist nil)
- '(safe-local-variable-values (quote ((org-babel-noweb-wrap-end . ">>") (org-babel-noweb-wrap-start . "#<<") (org-export-html-postamble . "<p style='font-size: smaller'>Copyright &copy; 2012 ShipRise and Avdi Grimm.</p>") (org-export-latex-verbatim-wrap "\\begin{Verbatim}[frame=leftline,label=Output]
+ '(ruby-deep-indent-paren nil)
+ '(safe-local-variable-values (quote ((encoding . utf-8) (org-babel-noweb-wrap-end . ">>") (org-babel-noweb-wrap-start . "#<<") (org-export-html-postamble . "<p style='font-size: smaller'>Copyright &copy; 2012 ShipRise and Avdi Grimm.</p>") (org-export-latex-verbatim-wrap "\\begin{Verbatim}[frame=leftline,label=Output]
 " . "\\end{Verbatim}
 ") (org-export-latex-minted-options ("frame" "leftline") ("linenos" "true") ("stepnumber" "2")) (org-table-formula-evaluate-inline) (org-export-latex-listings . minted) (org-latex-to-pdf-process "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f") (org-export-latex-minted-langs (html "rhtml") (emacs-lisp "common-lisp") (cc "c++") (cperl "perl") (shell-script "bash") (caml "ocaml")) (org-latex-to-pdf-process quote ("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")) (org-export-latex-minted-langs quote ((html "rhtml") (emacs-lisp "common-lisp") (cc "c++") (cperl "perl") (shell-script "bash") (caml "ocaml"))) (org-export-latex-minted . t) (org-export-latex-listings quote minted) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby"))))
  '(scroll-bar-mode nil)
+ '(show-paren-mode t)
  '(tags-revert-without-query t)
  '(term-unbind-key-list (quote ("C-z" "C-x" "C-h" "C-y" "<ESC>")))
  '(tool-bar-mode nil)

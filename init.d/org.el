@@ -4,6 +4,17 @@
                      :type git
                      :url "https://github.com/avdi/org-tree-slide.git"))
 (el-get 'sync '(org-tree-slide))
+
+(add-to-list 'el-get-sources
+             '(:name org-markdown
+                     :description "org markdown export"
+                     :type git
+                     :url "https://github.com/alexhenning/ORGMODE-Markdown.git"))
+(el-get 'sync '(org-markdown))
+(require 'org-export-generic)
+(load "markdown")
+
+
 (define-key org-mode-map (kbd "<f11>") 'org-tree-slide-mode)
 (define-key org-mode-map (kbd "S-<f11>") 'org-tree-slide-skip-done-toggle)
 (add-hook 'org-mode-hook

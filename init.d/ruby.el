@@ -4,6 +4,9 @@
 ;(add-hook 'ruby-mode-hook
 ;	  (lambda () (rvm-activate-corresponding-ruby)))
 
+;; Load rcodetools
+(rvm-use-default)
+
 ;; Finding rcodetools the hard way:
 ;;
 ;; (defun abg-rcodetools-path ()
