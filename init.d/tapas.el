@@ -1,5 +1,6 @@
-(require 'color-theme)
-(require 'color-theme-molokai)
+(defun make-rubytapas-frame ()
+  (require 'color-theme)
+  (require 'color-theme-molokai)
 
 (defun abg-slow-playback () "Kill region and then play it back slowly" (interactive)
   (save-excursion
