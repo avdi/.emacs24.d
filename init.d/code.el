@@ -1,3 +1,10 @@
+(setq abg-code-modes-hook nil)
+
+;; Color-code matching delimiters
+(el-get 'sync '(rainbow-delimiters))
+(add-hook 'abg-code-modes-hook
+	  (lambda () (rainbow-delimiters-mode 1)))
+
 (autoload 'fci-mode "fill-column-indicator"
   "Toggle fill column indicator"
   t)
