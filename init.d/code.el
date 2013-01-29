@@ -22,3 +22,7 @@
 ;; Show an indicator of the fill column
 (add-hook 'abg-code-modes-hook
           (lambda () (fci-mode 1)))            
+;; This interacts badly with org-mode HTML export
+
+(add-hook 'org-export-preprocess-hook
+          (lambda () (fci-mode -1)))
