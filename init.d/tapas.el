@@ -18,17 +18,13 @@
 (defun make-rubytapas-frame ()
   (interactive)
 
-  (require 'color-theme)
-  (require 'color-theme-rubytapas)
   (require 'centered-cursor-mode)
-  (let* ((color-theme-is-global nil)
-         (frame-alist '((width . 80)
+  (let* ((frame-alist '((width . 80)
                        (height . 30)
                        (menu-bar-lines . 0)
                        (name . "RubyTapas")))
          (frame (make-frame frame-alist)))
     (select-frame frame)
-    (color-theme-rubytapas)
     (set-frame-font "Inconsolata:pixelsize=24:foundry=unknown:weight=normal:slant=normal:width=normal:spacing=100:scalable=true" nil)
     (switch-to-buffer "RubyTapas")
     (ruby-mode)
@@ -47,13 +43,17 @@
                         :inherit nil)
 
     (hl-line-mode 1)
-    (local-set-key (kbd "<f8>") 'abg-slow-playback)))
+    (local-set-key (kbd "<f8>") 'abg-slow-playback)
+    (local-set-key (kbd "<f9>") 'rubytapas-xscribble)))
 
 (defun rubytapas-file-title ()
   (capitalize 
-   (replace-regexp-in-string "[0-9x]\\{3\\}-" ""
-                             (file-name-sans-extension 
-                              (file-name-nondirectory buffer-file-name)))))
+   (replace-regexp-in-string 
+    "[^[:alnum:]]+" " "
+    (replace-regexp-in-string 
+     "[0-9x]\\{3\\}-" ""
+     (file-name-sans-extension 
+      (file-name-nondirectory buffer-file-name))))))
 
 
 (defun rubytapas-insert-episode-boilerplate ()
@@ -69,5 +69,12 @@
              0)
       (rubytapas-insert-episode-boilerplate)))
 
-(add-to-list 'auto-insert-alist
-             '(org-mode . rubytapas-auto-insert))
+(eval-after-load "autoinsert"
+  '(add-to-list 'auto-insert-alist
+		'(org-mode . rubytapas-auto-insert)))
+
+(defun rubytapas-xscribble ()
+  (interactive)
+  (let ((window-id (frame-parameter nil 'outer-window-id)))
+    (start-process-shell-command "XScribble" "*XScribble*" (concat "/usr/local/bin/Xscribble " window-id " &"))))
+

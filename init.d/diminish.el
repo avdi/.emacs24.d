@@ -1,4 +1,4 @@
-(abg-require-package 'diminish)
+;(abg-require-package 'diminish)
 (when (require 'diminish nil 'noerror)
   (eval-after-load "abbrev"
     '(diminish 'abbrev-mode "Ab"))

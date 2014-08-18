@@ -3,6 +3,7 @@
 (setq abg-snippets-dir 
       (expand-file-name "snippets" abg-emacs-config-dir))
 (add-to-list 'yas/root-directory abg-snippets-dir)
+(yas-reload-all)
 
 ;; See http://stackoverflow.com/questions/9418148/conflicts-between-org-mode-and-yasnippet
 (defun yas/org-very-safe-expand ()

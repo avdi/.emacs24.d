@@ -19,3 +19,9 @@
 
 
 
+(defun abg-open-shell-frame ()
+  (interactive)
+  (let ((frame (make-frame)))
+    (select-frame frame)
+    (multi-term-dedicated-open)
+    (delete-other-windows)))

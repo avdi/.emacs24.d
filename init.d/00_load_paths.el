@@ -6,3 +6,7 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+
+;; Add personal theme path
+(add-to-list 'custom-theme-load-path abg-themes-dir)
+

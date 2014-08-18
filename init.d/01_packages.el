@@ -5,6 +5,8 @@
             '("ELPA" . "http://tromey.com/elpa/"))
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives 
+             '("org" . "http://orgmode.org/elpa/") t)
 (package-initialize)
 
 ;; el-get - see https://github.com/dimitri/el-get
@@ -52,7 +54,6 @@
 	yasnippet
 	rvm
 	rhtml-mode
-	org-mode
 	coffee-mode
 	fill-column-indicator
 	findr
@@ -72,7 +73,8 @@
 ;; Annoying packages that explode during install if their deps are not
 ;; met.
 (setq abg-dependent-packages
-      '(org2blog 
+      '(
+        ; org2blog 
 	; gist
 	sass-mode))
 

@@ -13,7 +13,7 @@
   "Color theme based on the Molokai color scheme for vim."
   (interactive)
   (color-theme-install
-   '(color-theme-molokai
+   '(color-theme-rubytapas
      ((foreground-color . "#F8F8F2")
       (background-color . "#1B1D1E")
       (cursor-color . "#F8F8F0")

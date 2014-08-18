@@ -4,12 +4,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ack-executable "/usr/bin/ack-grep")
+ '(blink-cursor-mode nil)
  '(coffee-tab-width 2)
+ '(col-highlight-vline-face-flag t)
+ '(column-highlight-mode t)
  '(column-number-mode t)
+ '(crosshairs-mode nil)
+ '(css-indent-offset 2)
  '(cua-enable-cua-keys nil)
  '(cua-mode t nil (cua-base))
  '(cua-remap-control-z t)
- '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" "71efabb175ea1cf5c9768f10dad62bb2606f41d110152f4ace675325d28df8bd" "b7553781f4a831d5af6545f7a5967eb002c8daeee688c5cbf33bf27936ec18b3" "965234e8069974a8b8c83e865e331e4f53ab9e74" default)))
+ '(custom-safe-themes (quote ("7c80494baabab0051a2d5d635fae64e5bf40975160cea3e16b0289f647d381fa" "b2dcfdb70cbc833efa148e4144b601ae99c3db17410ec3a7b43b2225057e59a2" "4847358c33a11abe3375edadffc856c51c6289e9dbc63dc1f488ae1d499649cf" "537a8fce3c268faf839613815ada794df76da32795976a16f9fdd5d54543a264" "8e09927954febd7abbb43ed782c844a08dac66f10349aeb262fd02972cff0db0" "47583b577fb062aeb89d3c45689a4f2646b7ebcb02e6cb2d5f6e2790afb91a18" "88d556f828e4ec17ac074077ef9dcaa36a59dccbaa6f2de553d6528b4df79cbd" "9f443833deb3412a34d2d2c912247349d4bd1b09e0f5eaba11a3ea7872892000" "71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" "71efabb175ea1cf5c9768f10dad62bb2606f41d110152f4ace675325d28df8bd" "b7553781f4a831d5af6545f7a5967eb002c8daeee688c5cbf33bf27936ec18b3" "965234e8069974a8b8c83e865e331e4f53ab9e74" default)))
+ '(erc-lurker-hide-list (quote ("JOIN" "KICK" "NICK" "PART" "QUIT" "MODE")))
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
  '(ido-use-filename-at-point (quote guess))
@@ -18,8 +24,11 @@
  '(js-indent-level 2)
  '(mark-even-if-inactive nil)
  '(markdown-command "redcarpet --parse-fenced_code_blocks")
+ '(menu-bar-mode nil)
  '(multi-term-dedicated-select-after-open-p t)
  '(multi-term-dedicated-window-height 20)
+ '(multi-term-program "/bin/bash")
+ '(multi-term-program-switches "--login")
  '(multi-term-scroll-to-bottom-on-output t)
  '(org-babel-load-languages (quote ((emacs-lisp . t) (ruby . t) (sh . t) (awk . t) (java . t) (clojure . t) (latex . t) (C . t))))
  '(org-babel-noweb-wrap-start "#<<")
@@ -27,6 +36,7 @@
  '(org-emphasis-alist (quote (("*" bold "<strong>" "</strong>") ("/" italic "<em>" "</em>") ("_" underline "<span style=\"text-decoration:underline;\">" "</span>") ("=" org-code "<code>" "</code>" verbatim) ("~" org-verbatim "<code>" "</code>" verbatim) ("+" (:strike-through t) "<del>" "</del>"))))
  '(org-export-htmlize-output-type (quote css))
  '(org-export-htmlized-org-css-url nil)
+ '(org-html-htmlize-output-type (quote css))
  '(org-id-link-to-org-use-id (quote create-if-interactive))
  '(org-latex-to-pdf-process (quote ("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
  '(org-link-to-org-use-id (quote create-if-interactive))
@@ -36,7 +46,7 @@
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("Tromey" . "http://tromey.com/elpa/"))))
  '(ruby-deep-arglist nil)
  '(ruby-deep-indent-paren nil)
- '(safe-local-variable-values (quote ((encoding . utf-8) (org-babel-noweb-wrap-end . ">>") (org-babel-noweb-wrap-start . "#<<") (org-export-html-postamble . "<p style='font-size: smaller'>Copyright &copy; 2012 ShipRise and Avdi Grimm.</p>") (org-export-latex-verbatim-wrap "\\begin{Verbatim}[frame=leftline,label=Output]
+ '(safe-local-variable-values (quote ((org-html-postamble) (org-html-htmlize-output-type quote css) (org-export-html-postamble . "<p style='font-size: smaller'>Copyright &copy; 2013 ShipRise and Avdi Grimm.</p>") (encoding . utf-8) (org-babel-noweb-wrap-end . ">>") (org-babel-noweb-wrap-start . "#<<") (org-export-html-postamble . "<p style='font-size: smaller'>Copyright &copy; 2012 ShipRise and Avdi Grimm.</p>") (org-export-latex-verbatim-wrap "\\begin{Verbatim}[frame=leftline,label=Output]
 " . "\\end{Verbatim}
 ") (org-export-latex-minted-options ("frame" "leftline") ("linenos" "true") ("stepnumber" "2")) (org-table-formula-evaluate-inline) (org-export-latex-listings . minted) (org-latex-to-pdf-process "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f") (org-export-latex-minted-langs (html "rhtml") (emacs-lisp "common-lisp") (cc "c++") (cperl "perl") (shell-script "bash") (caml "ocaml")) (org-latex-to-pdf-process quote ("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f" "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")) (org-export-latex-minted-langs quote ((html "rhtml") (emacs-lisp "common-lisp") (cc "c++") (cperl "perl") (shell-script "bash") (caml "ocaml"))) (org-export-latex-minted . t) (org-export-latex-listings quote minted) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby"))))
  '(scroll-bar-mode nil)
@@ -44,12 +54,13 @@
  '(tags-revert-without-query t)
  '(term-unbind-key-list (quote ("C-z" "C-x" "C-h" "C-y" "<ESC>")))
  '(tool-bar-mode nil)
+ '(user-mail-address "avdi@avdi.org")
+ '(vline-idle-time 1.0)
  '(whitespace-style (quote (face tabs trailing space-before-tab indentation empty space-after-tab tab-mark))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "Inconsolata"))))
  '(org-level-2 ((t (:inherit org-tree-slide-heading-level-2-init))))
  '(org-level-3 ((t (:inherit org-tree-slide-heading-level-3-init)))))

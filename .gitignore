@@ -9,3 +9,12 @@ backup
 *~
 /el-get/el-get/
 /el-get
+**/#*#
+/.org-id-locations
+/bookmarks
+/elisp/chruby.el
+/elisp/external/
+/eshell/history
+/eshell/lastdir
+/init.d/el4r.el
+/var/pcache/gh/gh-pulls-api/avdi
